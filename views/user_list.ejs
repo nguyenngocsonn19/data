@@ -1,0 +1,63 @@
+<!-- user_list.ejs -->
+<html>
+
+<head>
+    <link rel="stylesheet" href="/style.css">
+    <style>
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #f8f8f8;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>All List User</h1>
+        <ul>
+            <!-- Danh sách người dùng -->
+            <% users.forEach(user=> { %>
+                <li>
+                    <strong>First Name:</strong>
+                    <%= user.firstName %><br>
+                        <strong>last Name:</strong>
+                        <%= user.lastName %><br>
+                            <strong>Mobile:</strong>
+                            <%= user.mobile %><br>
+                                <strong>Username:</strong>
+                                <%= user.userName %><br>
+                                    <strong>Password:</strong>
+                                    <%= user.password %><br>
+                </li>
+                <% }); %>
+        </ul>
+    </div>
+</body>
+
+</html>
